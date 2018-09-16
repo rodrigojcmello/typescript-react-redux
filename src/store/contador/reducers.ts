@@ -1,7 +1,11 @@
-import { IAppState } from '../store';
-import { ContadorAction } from './actions';
+// import { IAppState } from '../store';
+import { ContadorAction, IContador } from './actions';
 
-const contador = (state: IAppState = { count: 0 }, action: ContadorAction): IAppState => {
+const stateInicial: IContador = {
+    count: 0,
+};
+
+const contador = (state: IContador = stateInicial, action: ContadorAction): IContador => {
     console.log('TCL: state', state);
     console.log('TCL: action', action);
     switch (action.type) {

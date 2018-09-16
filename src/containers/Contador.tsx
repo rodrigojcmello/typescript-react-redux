@@ -11,12 +11,14 @@ const Contador = (props: any) => {
             <button onClick={() => props.aumentar(5)}>
                 contador
             </button>
-            <span>{props.contador.count}</span>
+            <span>{props.count}</span>
         </div>
     );
 };
 
-const mapStateToProps = (state: IAppState) => (state);
+const mapStateToProps = (state: IAppState) => ({
+    count: state.contador.count,
+});
 
 const mapDispatchToProps = (dispatch: any) => (
     bindActionCreators({ aumentar }, dispatch)

@@ -4,9 +4,11 @@ import { render } from 'react-dom';
 
 // Redux
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from './store/store';
-const store = createStore(reducers);
+import { store } from './store/store';
+// import { store } from './store/store';
+// import { createStore } from 'redux';
+// import reducers from './store/store';
+// const store = createStore(reducers);
 
 // Compoenentes
 // import TarefaEntrada from './containers/TarefaEntrada';
