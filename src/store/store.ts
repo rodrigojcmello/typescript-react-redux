@@ -1,10 +1,10 @@
-import { combineReducers, createStore } from 'redux';
+import { Action, combineReducers, createStore } from 'redux';
 import { IContador } from './contador/actions';
 import contador from './contador/reducers';
 // import todos from './todos';
 // import visibilityFilter from './visibilityFilter';
 
-export interface IAppState {
+export interface IAppState extends Action {
     contador: IContador;
 }
 

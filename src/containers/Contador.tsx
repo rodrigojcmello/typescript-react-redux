@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, Dispatch } from 'redux';
 import { aumentar } from '../store/contador/actions';
 import { IAppState } from '../store/store';
 
@@ -20,7 +20,7 @@ const mapStateToProps = (state: IAppState) => ({
     count: state.contador.count,
 });
 
-const mapDispatchToProps = (dispatch: any) => (
+const mapDispatchToProps = (dispatch: Dispatch<IAppState>) => (
     bindActionCreators({ aumentar }, dispatch)
 );
 
