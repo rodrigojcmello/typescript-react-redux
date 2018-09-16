@@ -1,4 +1,3 @@
-// import { IAppState } from '../store';
 import { ContadorAction, IContador } from './actions';
 
 const stateInicial: IContador = {
