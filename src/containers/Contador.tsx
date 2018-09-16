@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { aumentar } from '../store/contador/actions';
+import { IAppState } from '../store/store';
 
 const Contador = (props: any) => {
     console.log('TCL: Contador -> props', props);
@@ -15,7 +16,7 @@ const Contador = (props: any) => {
     );
 };
 
-const mapStateToProps = (state: any) => (state);
+const mapStateToProps = (state: IAppState) => (state);
 
 const mapDispatchToProps = (dispatch: any) => (
     bindActionCreators({ aumentar }, dispatch)
