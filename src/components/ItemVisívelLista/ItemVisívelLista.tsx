@@ -15,7 +15,7 @@ class ItensVisíveisLista extends React.PureComponent<IPropsItensVisíveis, {}> 
     public render() {
         return (
             <ul>
-                {this.props.itens.map((item: IItem, índice: number) => (
+                {this.props.itens.map((item: IItem, índice) => (
                     <li key={índice}>
                         {item.título}
                     </li>
