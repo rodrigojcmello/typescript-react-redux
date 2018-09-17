@@ -21,25 +21,23 @@ class ItemEntrada extends React.PureComponent<IPropsItemEntrada, IStateItemEntra
     public adicionarItem = (evento: React.SyntheticEvent<HTMLFormElement>) => {
         evento.preventDefault();
         if (this.state.entrada.trim()) {
-            // TODO: testar parametros
             this.props.adicionarItem('rodrigo', this.state.entrada);
             this.setState({ entrada: '' });
         }
-        // this.props.dispatch(addTodo('Rodrigo', this.state.entrada));
     }
     public componentDidMount() {
         console.log('### this.props', this.props);
     }
     public render() {
         return (
-            <div>
+            <>
                 <form onSubmit={this.adicionarItem}>
                     <input value={this.state.entrada} onChange={this.definirEntrada} />
                     <button type='submit'>
                         Adicionar
                     </button>
                 </form>
-            </div>
+            </>
         );
     }
 }
