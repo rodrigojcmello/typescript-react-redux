@@ -5,16 +5,14 @@ import { render } from 'react-dom';
 // Redux
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-// import { store } from './store/store';
-// import { createStore } from 'redux';
-// import reducers from './store/store';
-// const store = createStore(reducers);
 
 // Compoenentes
 // import TarefaEntrada from './containers/TarefaEntrada';
 // import Filtro from './components/Filtro';
 // import VisibleTodoList from './containers/VisibleTodoList';
 import Contador from './containers/Contador';
+import ItemEntrada from './containers/ItemEntrada';
+import ItemLista from './containers/ItemLista';
 
 render(
     <Provider store={store}>
@@ -23,6 +21,8 @@ render(
             <Filtro />
             <VisibleTodoList /> */}
             <Contador />
+            <ItemEntrada />
+            <ItemLista />
         </>
     </Provider>,
     document.getElementById('root'),
