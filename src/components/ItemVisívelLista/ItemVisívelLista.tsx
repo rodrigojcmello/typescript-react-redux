@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IItem } from '../../store/itens/actions';
+import { IItem } from '../../store/itens/itensActions';
 
 interface IPropsItensVisíveis {
     itens: IItem[];

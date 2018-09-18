@@ -14,6 +14,12 @@ class ItemEntrada extends React.PureComponent<IPropsItemEntrada, IStateItemEntra
         this.state = {
             entrada: '',
         };
+        const person = {
+            country: 'USA',
+            firstName: 'Sebastian',
+            lastName: 'Markbåge',
+            state: 'CA',
+        };
     }
     public definirEntrada = (evento: React.SyntheticEvent<HTMLInputElement>) => {
         this.setState({ entrada: evento.currentTarget.value });

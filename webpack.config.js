@@ -3,10 +3,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
-const produção = process.env.NODE_ENV == 'production';
+const prod = process.env.NODE_ENV == 'production';
 
 const config = {
-    mode: produção ? 'production' : 'development',
+    mode: prod ? 'production' : 'development',
     entry: './src/App.tsx',
     output: {
         filename: '[name].[contenthash].js',
@@ -26,7 +26,7 @@ const config = {
                             [
                                 "@babel/preset-env",
                                 {
-                                    "targets": !produção
+                                    "targets": !prod
                                         ? "last 1 chrome version"
                                         : ["> 1%", "ie 10"]
                                 }
@@ -36,8 +36,9 @@ const config = {
                         ],
                         plugins: [
                             '@babel/plugin-proposal-class-properties',
-                            produção ? '@babel/plugin-transform-react-inline-elements' : {},
-                            produção ? 'transform-remove-console' : {}
+                            '@babel/plugin-transform-runtime',
+                            prod ? '@babel/plugin-transform-react-inline-elements' : {},
+                            prod ? 'transform-remove-console' : {}
                         ],
                         cacheDirectory: true
                     }
@@ -53,7 +54,7 @@ const config = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: !produção,
+                            sourceMap: !prod,
                             localIdentName: '[name]__[local]--[hash:base64:5]'
                         }
                     },
@@ -72,12 +73,21 @@ const config = {
                 test: /\.(jpe?g|png|gif|eot|woff2?|ttf|svg)$/,
                 use: [{
                     loader: 'file-loader',
-                    options: { name: produção ? 'assets/[hash].[ext]' : 'assets/[name].[hash].[ext]' }
+                    options: { name: prod ? 'assets/[hash].[ext]' : 'assets/[name].[hash].[ext]' }
                 }]
             }]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './index.html' })
+        new HtmlWebpackPlugin({ template: './index.html' }),
+        prod ? new CleanWebpackPlugin(['dist']) : () => { },
+        !prod ? new ForkTsCheckerWebpackPlugin({
+            tslint: './tslint.json',
+            async: false
+        }) : () => { },
+        !prod ? new ForkTsCheckerNotifierWebpackPlugin({
+            title: 'Webpack',
+            skipSuccessful: true
+        }) : () => { }
     ],
     optimization: {
         runtimeChunk: 'single',
@@ -96,23 +106,10 @@ const config = {
     }
 };
 
-if (produção) {
-    config.plugins.push(
-        new CleanWebpackPlugin(['dist'])
-    )
-} else {
+
+if (!prod) {
     config.devtool = 'eval-source-map';
-    config.plugins.push(
-        new ForkTsCheckerWebpackPlugin({
-            tslint: './tslint.json',
-            async: false
-        }),
-        new ForkTsCheckerNotifierWebpackPlugin({
-            title: 'Webpack',
-            skipSuccessful: true
-        })
-    )
 }
 
-console.log('produção', produção);
+console.log('produção', prod);
 module.exports = config;

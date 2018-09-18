@@ -1,7 +1,7 @@
 export interface IItem {
-    autor?: string;
-    título?: string;
-    concluído?: boolean;
+    autor: string;
+    título: string;
+    concluído: boolean;
 }
 
 export interface IAdicionarItemAction extends IItem {
@@ -10,6 +10,7 @@ export interface IAdicionarItemAction extends IItem {
 
 export const adicionarItem = (autor: string, título: string): IAdicionarItemAction => ({
     autor,
+    concluído: true,
     type: 'ADICIONAR_ITEM',
     título,
 });

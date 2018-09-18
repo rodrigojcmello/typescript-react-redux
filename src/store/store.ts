@@ -1,8 +1,8 @@
 import { Action, combineReducers, createStore } from 'redux';
-import { IContador } from './contador/actions';
-import contador from './contador/reducers';
-import { IItem } from './itens/actions';
-import itens from './itens/reducers';
+import { IContador } from './contador/ContadorActions';
+import contador from './contador/ContadorReducers';
+import { IItem } from './itens/itensActions';
+import itens from './itens/itensReducers';
 // import todos from './todos';
 // import visibilityFilter from './visibilityFilter';
 

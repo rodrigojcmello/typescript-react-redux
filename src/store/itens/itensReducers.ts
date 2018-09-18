@@ -1,12 +1,6 @@
-import { AnyAction } from 'redux';
-// import { IItem, IItens, ItensAction } from './actions';
+import { IItem, ItensAction } from './itensActions';
 
-// const stateInicial: IItens = {
-//     itens: [],
-// };
-
-const itens = (state: any = [], action: AnyAction) => {
-    console.log('TCL: itens -> state', state);
+const itens = (state: IItem[] = [], action: ItensAction): IItem[] => {
     switch (action.type) {
         case 'ADICIONAR_ITEM':
             return [
