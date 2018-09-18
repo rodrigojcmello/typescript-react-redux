@@ -14,7 +14,7 @@ class Contador extends React.PureComponent<IPropsContador> {
         super(props);
     }
     public clicar = (evento: React.SyntheticEvent<HTMLButtonElement>) => {
-        const número: number = Number(evento.currentTarget.dataset.número);
+        const número = Number(evento.currentTarget.dataset.número);
         this.props.aumentar(número);
     }
     public render() {
