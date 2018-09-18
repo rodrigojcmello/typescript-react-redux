@@ -1,6 +1,6 @@
 import { Action, combineReducers, createStore } from 'redux';
-import { IContador } from './contador/ContadorActions';
-import contador from './contador/ContadorReducers';
+import { IContador } from './contador/contadorActions';
+import contador from './contador/contadorReducers';
 import { IItem } from './itens/itensActions';
 import itens from './itens/itensReducers';
 // import todos from './todos';

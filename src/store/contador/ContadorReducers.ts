@@ -1,4 +1,4 @@
-import { ContadorAction, IContador } from './ContadorActions';
+import { ContadorAction, IContador } from './contadorActions';
 
 const contador = (state: IContador = { count: 0 }, action: ContadorAction): IContador => {
     console.log('TCL: state', state);
