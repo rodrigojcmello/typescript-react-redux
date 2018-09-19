@@ -3,10 +3,11 @@ export interface IItem {
     título: string;
     concluído: boolean;
 }
-export interface IAdicionarItemAction extends IItem {
+interface IAdicionarItemAction extends IItem {
     type: 'ADICIONAR_ITEM';
 }
-export const adicionarItem = (autor: string, título: string): IAdicionarItemAction => ({
+export type AdicionarItem = (autor: string, título: string) => void | IAdicionarItemAction;
+export const adicionarItem: AdicionarItem = (autor, título): IAdicionarItemAction => ({
     autor,
     concluído: true,
     type: 'ADICIONAR_ITEM',

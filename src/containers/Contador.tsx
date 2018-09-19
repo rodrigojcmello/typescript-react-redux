@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { aumentar } from '../store/contador/contadorActions';
+import { aumentar, Aumentar } from '../store/contador/contadorActions';
 import { IAppState } from '../store/store';
 
 interface IPropsContador {
-    count: number;
-    aumentar: (número: number) => void;
+    count?: number;
+    aumentar?: Aumentar;
 }
 
 class Contador extends React.PureComponent<IPropsContador> {

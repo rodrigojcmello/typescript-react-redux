@@ -5,7 +5,8 @@ interface IAumentarAction {
     número: number;
     type: 'AUMENTAR';
 }
-export const aumentar = (número: number): IAumentarAction => ({
+export type Aumentar = (número: number) => void | IAumentarAction;
+export const aumentar: Aumentar = (número): IAumentarAction => ({
     número,
     type: 'AUMENTAR',
 });

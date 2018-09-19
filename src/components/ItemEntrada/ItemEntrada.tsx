@@ -1,11 +1,13 @@
 import * as React from 'react';
+import { AdicionarItem } from '../../store/itens/itensActions';
 
 interface IStateItemEntrada {
     entrada: string;
 }
 
 interface IPropsItemEntrada {
-    adicionarItem: (autor: string, título: string) => void;
+    // adicionarItem: (autor: string, título: string) => void;
+    adicionarItem?: AdicionarItem;
 }
 
 class ItemEntrada extends React.PureComponent<IPropsItemEntrada, IStateItemEntrada> {
