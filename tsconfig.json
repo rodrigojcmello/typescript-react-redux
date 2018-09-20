@@ -2,7 +2,8 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "jsx": "react"
+        "jsx": "react",
+        "target": "esnext",
     },
     "include": [
         "./src/**/*"

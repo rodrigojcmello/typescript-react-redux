@@ -13,4 +13,15 @@ export const adicionarItem: AdicionarItem = (autor, título): IAdicionarItemActi
     type: 'ADICIONAR_ITEM',
     título,
 });
-export type ItensAction = IAdicionarItemAction;
+
+interface IAlternarConclusãoItemsAction {
+    type: 'ALTERNAR_CONCLUSÃO_ITEM';
+    índice: number;
+}
+export type AlternarConclusãoItem = (índice: number) => void;
+export const alternarConclusãoItem = (índice: number): IAlternarConclusãoItemsAction => ({
+    type: 'ALTERNAR_CONCLUSÃO_ITEM',
+    índice,
+});
+
+export type ItensAction = IAdicionarItemAction | IAlternarConclusãoItemsAction;

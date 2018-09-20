@@ -66,7 +66,7 @@ const config = {
                             plugins: [autoprefixer()]
                         }
                     },
-                    'typed-css-modules-loader'
+                    'typed-css-modules-loader?noEmit'
                 ]
             },
             {

@@ -11,6 +11,12 @@ const itens = (state: IItem[] = [], action: ItensAction): IItem[] => {
                     título: action.título,
                 },
             ];
+        case 'ALTERNAR_CONCLUSÃO_ITEM':
+            return state.map((item: IItem, índice): IItem => (
+                (índice === action.índice)
+                    ? { ...item, concluído: !item.concluído }
+                    : item
+            ));
         default:
             return state;
     }
