@@ -6,5 +6,6 @@ import { adicionarItem } from '../store/itens/itensActions';
 const mapDispatchToProps = (dispatch: Dispatch) => (
     bindActionCreators({ adicionarItem }, dispatch)
 );
+console.log('### TCL: mapDispatchToProps', mapDispatchToProps);
 
 export default connect(null, mapDispatchToProps)(ItemEntrada);
