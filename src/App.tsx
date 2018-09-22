@@ -6,12 +6,10 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-
-// Compoenentes
-import { OláMundo } from './components/OláMundo/OláMundo';
-import { Acesso } from './components/telas/Acesso/Acesso';
-import ListaContainer from './containers/ListaContainer';
+// Route
+import { renderRoutes } from 'react-router-config';
+import { BrowserRouter, Link, Switch } from 'react-router-dom';
+import routes from './routes';
 
 render(
     <Provider store={store}>
@@ -21,9 +19,7 @@ render(
                 <Link to='/acesso'>acesso</Link>
                 <Link to='/olá-mundo'>Olá Mundo</Link>
                 <Switch>
-                    <Route exact={true} path='/' component={ListaContainer} />
-                    <Route path='/acesso' component={Acesso} />
-                    <Route path='/olá-mundo' component={OláMundo} />
+                    {renderRoutes(routes)}
                 </Switch>
             </>
         </BrowserRouter>
