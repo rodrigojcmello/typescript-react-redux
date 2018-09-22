@@ -1,10 +1,12 @@
 import { Action, combineReducers, createStore } from 'redux';
+
+// Actions
 import { IContador } from './contador/contadorActions';
-import contador from './contador/contadorReducers';
 import { IItem } from './itens/itensActions';
+
+// Reducers
+import contador from './contador/contadorReducers';
 import itens from './itens/itensReducers';
-// import todos from './todos';
-// import visibilityFilter from './visibilityFilter';
 
 export interface IAppState extends Action {
     contador: IContador;
@@ -12,8 +14,6 @@ export interface IAppState extends Action {
 }
 
 const reducers = combineReducers({
-    // todos,
-    // visibilityFilter,
     contador,
     itens,
 });
