@@ -18,8 +18,10 @@ render(
                 <Link to='/'>Início</Link>
                 <Link to='/acesso'>acesso</Link>
                 <Link to='/olá-mundo'>Olá Mundo</Link>
+                <Link to='/posts'>Posts</Link>
                 <Switch>
                     {renderRoutes(routes)}
+                    {/* {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)} */}
                 </Switch>
             </>
         </BrowserRouter>

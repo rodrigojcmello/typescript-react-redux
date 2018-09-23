@@ -1,0 +1,5 @@
+- Interface do objeto da ação desejada
+- Interface da action extendendo a interface anterior
+- Criar um type para a chamada do método
+- Criar o Action Creator
+- Exportar as actions

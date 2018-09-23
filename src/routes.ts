@@ -4,6 +4,8 @@ import { RouteConfig } from 'react-router-config';
 import { OláMundo } from './components/OláMundo/OláMundo';
 import { Acesso } from './components/telas/Acesso/Acesso';
 import ListaContainer from './containers/ListaContainer';
+// import PostLista from './screens/Posts/components/PostLista/PostLista';
+import PostListaContainer from './screens/Posts/containers/PostListaContainer';
 
 const routes: RouteConfig[] = [
     {
@@ -18,6 +20,14 @@ const routes: RouteConfig[] = [
     {
         component: OláMundo,
         path: '/olá-mundo',
+    },
+    {
+        component: PostListaContainer,
+        path: '/posts',
+    },
+    {
+        component: Acesso,
+        path: '/lixo',
     },
 ];
 
