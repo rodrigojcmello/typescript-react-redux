@@ -9,6 +9,9 @@ class PostLista extends React.PureComponent<IProps> {
     constructor(props: IProps) {
         super(props);
     }
+    public componentDidMount() {
+        console.log('teste');
+    }
     public render() {
         return (
             <ul>
