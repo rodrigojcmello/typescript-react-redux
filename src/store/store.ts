@@ -16,12 +16,6 @@ export interface IAppState extends Action {
     posts: IPost[];
 }
 
-declare global {
-    // tslint:disable-next-line:interface-name
-    interface Window { __REDUX_DEVTOOLS_EXTENSION__: any; }
-}
-window.__REDUX_DEVTOOLS_EXTENSION__ = window.__REDUX_DEVTOOLS_EXTENSION__ || {};
-
 const reducers = combineReducers({
     contador,
     itens,
@@ -30,5 +24,6 @@ const reducers = combineReducers({
 
 export const store = createStore(
     reducers,
+// @ts-ignore
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
