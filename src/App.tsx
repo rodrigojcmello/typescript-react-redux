@@ -1,6 +1,6 @@
 // React
 import * as React from 'react';
-import { render } from 'react-dom';
+import { render} from 'react-dom';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -21,7 +21,6 @@ render(
                 <Link to='/posts'>Posts</Link>
                 <Switch>
                     {renderRoutes(routes)}
-                    {/* {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)} */}
                 </Switch>
             </>
         </BrowserRouter>
