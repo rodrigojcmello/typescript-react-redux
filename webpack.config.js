@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
-const prod = process.env.NODE_ENV == 'production';
+const prod = process.env.NODE_ENV === 'production';
 
 const config = {
     mode: prod ? 'production' : 'development',
