@@ -11,13 +11,16 @@ class ItensVisíveisLista extends React.PureComponent<IPropsItensVisíveis, {}> 
     constructor(props: IPropsItensVisíveis) {
         super(props);
     }
+
     public componentDidMount() {
         console.log('ItensVisíveisLista this.props', this.props);
     }
+
     public alternarConclusãoItem = (evento: React.SyntheticEvent<HTMLLIElement>) => {
         const índice = Number(evento.currentTarget.dataset.índice);
         this.props.alternarConclusãoItem(índice);
-    }
+    };
+
     public render() {
         return (
             <ul>

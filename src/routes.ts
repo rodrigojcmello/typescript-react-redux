@@ -1,11 +1,10 @@
 import { RouteConfig } from 'react-router-config';
-
 // Componentes
-import { OláMundo } from './components/OláMundo/OláMundo';
 import { Acesso } from './components/telas/Acesso/Acesso';
 import ListaContainer from './containers/ListaContainer';
-// import PostLista from './screens/Posts/components/PostLista/PostLista';
 import PostListaContainer from './screens/Posts/containers/PostListaContainer';
+import { OláMundo } from './components/OláMundo/OláMundo';
+import Carro from './screens/Carros/components/Carro';
 
 const routes: RouteConfig[] = [
     {
@@ -14,7 +13,13 @@ const routes: RouteConfig[] = [
         path: '/',
     },
     {
+        component: Carro,
+        exact: true,
+        path: '/acesso/carro',
+    },
+    {
         component: Acesso,
+        exact: true,
         path: '/acesso',
     },
     {

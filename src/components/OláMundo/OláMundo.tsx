@@ -25,6 +25,9 @@ interface IState {
     lista: ILista[];
 }
 
+let x: { nome: string; sobrenome: string };
+x = { nome: 'queijo quente', sobrenome: 'mello' };
+
 class OláMundo extends React.PureComponent<IProps, IState> {
     constructor(props: IProps) {
         super(props);
@@ -37,29 +40,35 @@ class OláMundo extends React.PureComponent<IProps, IState> {
             número: 123,
         };
     }
+
     public adicionar = (evento: React.SyntheticEvent<HTMLButtonElement>) => {
         const valor: number = Number(evento.currentTarget.dataset.valor);
         this.setState((prevState) => ({
             número: prevState.número + valor,
         }));
+    };
+
+    public componentDidMount() {
+        console.log('olá mundo', this.state);
     }
+
     public render() {
         return (
             <>
-                <h1 className={s.azul}>
+                <h1 className={s.box}>
                     Olá {this.state.nome} from {this.props.compiler} and {this.props.framework}!
                 </h1>
                 contador: {this.state.número}
-                <MiniLista lista={this.state.lista} />
-                <Acesso />
-                <Perfil />
-                <Lista lista={this.state.lista} />
+                <MiniLista lista={this.state.lista}/>
+                <Acesso/>
+                <Perfil/>
+                <Lista lista={this.state.lista}/>
                 <Link to='/acesso'>Acesso</Link>
                 <button
                     onClick={this.adicionar}
                     data-valor='10'
                 >
-                    adicionar2
+                    adicionar
                 </button>
             </>
         );

@@ -6,33 +6,37 @@
     "license": "ISC",
     "main": "index.js",
     "scripts": {
-        "start": "set NODE_ENV=development && webpack-dev-server"
+        "start": "NODE_ENV=development webpack-dev-server",
+        "build": "NODE_ENV=production webpack",
+        "build:dev": "NODE_ENV=development webpack"
     },
     "dependencies": {
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
-        "react-redux": "^5.0.7"
+        "react-redux": "^5.0.7",
+        "store": "^2.0.12",
+        "typed-css-modules": "^0.3.6"
     },
     "devDependencies": {
-        "@babel/core": "^7.1.0",
+        "@babel/core": "^7.1.2",
         "@babel/plugin-proposal-class-properties": "^7.1.0",
         "@babel/plugin-transform-react-inline-elements": "^7.0.0",
         "@babel/plugin-transform-runtime": "^7.1.0",
         "@babel/preset-env": "^7.1.0",
         "@babel/preset-react": "^7.0.0",
         "@babel/preset-typescript": "^7.1.0",
-        "@babel/runtime": "^7.0.0",
+        "@babel/runtime": "^7.1.2",
         "@types/react": "^16.4.14",
-        "@types/react-dom": "^16.0.7",
+        "@types/react-dom": "^16.0.8",
         "@types/react-redux": "^6.0.9",
         "@types/react-router-config": "^1.0.9",
         "@types/react-router-dom": "^4.3.1",
         "autoprefixer": "^9.1.5",
-        "babel-loader": "^8.0.2",
+        "babel-loader": "^8.0.4",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^1.0.0",
         "file-loader": "^2.0.0",
-        "fork-ts-checker-notifier-webpack-plugin": "^0.6.0",
+        "fork-ts-checker-notifier-webpack-plugin": "^0.6.2",
         "fork-ts-checker-webpack-plugin": "^0.4.9",
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.9.3",
@@ -45,19 +49,9 @@
         "tslint": "^5.11.0",
         "tslint-react": "^3.6.0",
         "typed-css-modules-loader": "0.0.15",
-        "typescript": "^3.0.3",
-        "webpack": "^4.19.1",
-        "webpack-cli": "^3.1.1",
-        "webpack-dev-server": "^3.1.8"
-    },
-    "stylelint": {
-        "rules": {
-            "unit-no-unknown": true,
-            "selector-type-no-unknown": true,
-            "no-invalid-double-slash-comments": true,
-            "no-duplicate-selectors": true,
-            "no-descending-specificity": true,
-            "unit-case": "lower"
-        }
+        "typescript": "^3.1.1",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.9"
     }
 }

@@ -37,8 +37,7 @@ const config = {
                         plugins: [
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-transform-runtime',
-                            prod ? '@babel/plugin-transform-react-inline-elements' : {},
-                            prod ? 'transform-remove-console' : {}
+                            prod ? '@babel/plugin-transform-react-inline-elements' : {}
                         ],
                         cacheDirectory: true
                     }
@@ -55,7 +54,7 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: !prod,
-                            localIdentName: '[name]__[local]--[hash:base64:5]'
+                            localIdentName: prod ? '[hash:base64:5]' : '[name]__[local]--[hash:base64:5]'
                         }
                     },
                     'sass-loader',
@@ -79,7 +78,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './index.html' }),
-        prod ? new CleanWebpackPlugin(['dist']) : () => { },
+        new CleanWebpackPlugin(['dist']),
         !prod ? new ForkTsCheckerWebpackPlugin({
             tslint: './tslint.json',
             async: false
@@ -104,7 +103,7 @@ const config = {
     devServer: {
         historyApiFallback: true,
     }
-};
+}
 
 
 if (!prod) {
