@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const prod = process.env.NODE_ENV === 'production';
 
 const config = {
@@ -10,7 +11,7 @@ const config = {
     entry: './src/App.tsx',
     output: {
         filename: '[name].[contenthash].js',
-        path: `${__dirname}/dist`,
+        path: `${__dirname}/dist`
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
@@ -82,11 +83,13 @@ const config = {
         !prod ? new ForkTsCheckerWebpackPlugin({
             tslint: './tslint.json',
             async: false
-        }) : () => { },
+        }) : () => {
+        },
         !prod ? new ForkTsCheckerNotifierWebpackPlugin({
             title: 'Webpack',
             skipSuccessful: true
-        }) : () => { }
+        }) : () => {
+        }
     ],
     optimization: {
         runtimeChunk: 'single',
@@ -98,15 +101,25 @@ const config = {
                     chunks: 'all'
                 }
             }
-        }
+        },
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    output: {
+                        ascii_only: true
+                    }
+                }
+            })
+        ]
     },
     devServer: {
         historyApiFallback: true,
     }
-}
+};
 
 
 if (!prod) {
+    config.output.publicPath = '/';
     config.devtool = 'eval-source-map';
 }
 

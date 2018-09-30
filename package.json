@@ -41,7 +41,7 @@
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.9.3",
         "postcss-loader": "^3.0.0",
-        "react-router-config": "^1.0.0-beta.4",
+        "react-router-config": "^4.4.0-beta.0",
         "react-router-dom": "^4.3.1",
         "redux": "^4.0.0",
         "sass-loader": "^7.1.0",
@@ -50,6 +50,7 @@
         "tslint-react": "^3.6.0",
         "typed-css-modules-loader": "0.0.15",
         "typescript": "^3.1.1",
+        "uglifyjs-webpack-plugin": "^2.0.1",
         "webpack": "^4.20.2",
         "webpack-cli": "^3.1.2",
         "webpack-dev-server": "^3.1.9"
