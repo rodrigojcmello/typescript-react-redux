@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { aumentar, Aumentar } from '../store/contador/contadorActions';
+import { aumentar } from '../store/contador/contadorActions';
 import { IAppState } from '../store/store';
+import { Aumentar } from '../store/contador/ContadorInterfaces';
 
 interface IPropsContador {
     count?: number;

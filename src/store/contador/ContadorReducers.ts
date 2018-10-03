@@ -1,17 +1,20 @@
-import { ContadorAction, IContador } from './contadorActions';
+import { Contador, ContadorAction } from './ContadorInterfaces';
+import * as store from 'store';
 
-const contador = (state: IContador = { count: 0 }, action: ContadorAction): IContador => {
-    console.log('TCL: state', state);
-    console.log('TCL: action', action);
+const contadorState: Contador = {
+    count: store.get('contador.count') || 0,
+};
+
+export const contador = (state = contadorState, action: ContadorAction): Contador => {
     switch (action.type) {
         case 'AUMENTAR':
+            const count = action.número + state.count;
+            store.set('contador.count', count);
             return {
                 ...state,
-                count: action.número + state.count,
+                count,
             };
         default:
             return state;
     }
 };
-
-export default contador;

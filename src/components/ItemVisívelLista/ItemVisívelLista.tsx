@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { AlternarConclusãoItem, IItem } from '../../store/itens/itensActions';
+import { AlternarConclusãoItem, Item } from '../../store/itens/itensInterfaces';
 import * as s from './ItemVisívelLista.scss';
 
-interface IPropsItensVisíveis {
-    itens: IItem[];
+interface Props {
+    itens: Item[];
     alternarConclusãoItem: AlternarConclusãoItem;
 }
 
-class ItensVisíveisLista extends React.PureComponent<IPropsItensVisíveis, {}> {
-    constructor(props: IPropsItensVisíveis) {
+class ItensVisíveisLista extends React.PureComponent<Props> {
+    constructor(props: Props) {
         super(props);
     }
 
@@ -24,7 +24,7 @@ class ItensVisíveisLista extends React.PureComponent<IPropsItensVisíveis, {}> 
     public render() {
         return (
             <ul>
-                {this.props.itens.map((item: IItem, índice) => (
+                {this.props.itens.map((item: Item, índice) => (
                     <li
                         key={índice}
                         data-índice={índice}

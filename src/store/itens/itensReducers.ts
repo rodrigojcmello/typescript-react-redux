@@ -1,6 +1,6 @@
-import { IItem, ItensAction } from './itensActions';
+import { Item, ItensAction } from './itensInterfaces';
 
-const itens = (state: IItem[] = [], action: ItensAction): IItem[] => {
+const itens = (state: Item[] = [], action: ItensAction): Item[] => {
     switch (action.type) {
 
         case 'ADICIONAR_ITEM':
@@ -14,7 +14,7 @@ const itens = (state: IItem[] = [], action: ItensAction): IItem[] => {
             ];
 
         case 'ALTERNAR_CONCLUSÃO_ITEM':
-            return state.map((item: IItem, índice): IItem => (
+            return state.map((item: Item, índice): Item => (
                 (índice === action.índice)
                     ? { ...item, concluído: !item.concluído }
                     : item

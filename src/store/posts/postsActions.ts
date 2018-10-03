@@ -1,17 +1,19 @@
-export interface IPost {
+export interface Post {
     userId: number;
     id: number;
     title: string;
     body: string;
 }
-interface IDefinirPostsAction {
+
+interface DefinirPostsAction {
     type: 'DEFINIR_POSTS';
-    posts: IPost[];
+    posts: Post[];
 }
-export type DefinirPosts = (posts: IPost[]) => void | IDefinirPostsAction;
-export const definirPosts: DefinirPosts = (posts): IDefinirPostsAction => ({
+
+export type DefinirPosts = (posts: Post[]) => void | DefinirPostsAction;
+export const definirPosts: DefinirPosts = (posts): DefinirPostsAction => ({
     type: 'DEFINIR_POSTS',
     posts,
 });
 
-export type PostsAction = IDefinirPostsAction;
+export type PostsAction = DefinirPostsAction;

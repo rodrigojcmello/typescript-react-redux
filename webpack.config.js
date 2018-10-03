@@ -120,7 +120,7 @@ const config = {
 
 if (!prod) {
     config.output.publicPath = '/';
-    config.devtool = 'eval-source-map';
+    config.devtool = 'source-map';
 }
 
 console.log('produção', prod);

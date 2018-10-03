@@ -17,6 +17,7 @@
       <w>toplevel</w>
       <w>tslint</w>
       <w>uglify</w>
+      <w>unmount</w>
     </words>
   </dictionary>
 </component>

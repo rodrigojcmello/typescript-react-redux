@@ -1,22 +1,27 @@
 {
-    "defaultSeverity": "warning",
-    "extends": [
-        "tslint:recommended",
-        "tslint-react"
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single"
     ],
-    "jsRules": {},
-    "rules": {
-        "quotemark": [
-            true,
-            "single",
-            "jsx-single"
-        ],
-        "jsx-no-multiline-js": false,
-        "jsx-no-lambda": false,
-        "no-console": false,
-        "object-literal-sort-keys": false,
-        "ordered-imports": false,
-        "semicolon": [true, "always", "strict-bound-class-methods"]
-    },
-    "rulesDirectory": []
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "semicolon": [
+      true,
+      "always",
+      "strict-bound-class-methods"
+    ],
+    "interface-name": false
+  },
+  "rulesDirectory": []
 }

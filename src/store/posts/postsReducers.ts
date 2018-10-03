@@ -1,6 +1,6 @@
-import { IPost, PostsAction } from './postsActions';
+import { Post, PostsAction } from './postsActions';
 
-export const posts = (state: IPost[] = [], action: PostsAction): IPost[] => {
+export const posts = (state: Post[] = [], action: PostsAction): Post[] => {
     switch (action.type) {
 
         case 'DEFINIR_POSTS':

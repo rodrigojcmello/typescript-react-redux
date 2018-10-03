@@ -26,7 +26,7 @@ interface IState {
 }
 
 let x: { nome: string; sobrenome: string };
-x = { nome: 'queijo quente', sobrenome: 'mello' };
+x = { nome: 'host quente', sobrenome: 'mello' };
 
 class OláMundo extends React.PureComponent<IProps, IState> {
     constructor(props: IProps) {

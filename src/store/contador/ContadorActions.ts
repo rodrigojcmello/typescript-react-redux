@@ -1,13 +1,6 @@
-export interface IContador {
-    count: number;
-}
-interface IAumentarAction {
-    número: number;
-    type: 'AUMENTAR';
-}
-export type Aumentar = (número: number) => void | IAumentarAction;
-export const aumentar: Aumentar = (número): IAumentarAction => ({
-    número,
+import { Aumentar, AumentarAction } from './ContadorInterfaces';
+
+export const aumentar: Aumentar = (número): AumentarAction => ({
     type: 'AUMENTAR',
+    número,
 });
-export type ContadorAction = IAumentarAction;

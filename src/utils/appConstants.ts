@@ -1,1 +1,5 @@
-export const domínio = 'https://jsonplaceholder.typicode.com';
+const host: string = 'https://jsonplaceholder.typicode.com';
+
+export {
+    host,
+};

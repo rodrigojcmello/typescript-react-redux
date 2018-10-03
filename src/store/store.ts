@@ -1,19 +1,17 @@
 import { Action, combineReducers, createStore } from 'redux';
-
 // Actions
-import { IContador } from './contador/contadorActions';
-import { IItem } from './itens/itensActions';
-import { IPost } from './posts/postsActions';
-
+import { Contador } from './contador/ContadorInterfaces';
+import { Item } from './itens/itensInterfaces';
+import { Post } from './posts/postsActions';
 // Reducers
-import contador from './contador/contadorReducers';
+import { contador } from './contador/contadorReducers';
 import itens from './itens/itensReducers';
 import { posts } from './posts/postsReducers';
 
 export interface IAppState extends Action {
-    contador: IContador;
-    itens: IItem[];
-    posts: IPost[];
+    contador: Contador;
+    itens: Item[];
+    posts: Post[];
 }
 
 const reducers = combineReducers({
@@ -21,6 +19,23 @@ const reducers = combineReducers({
     itens,
     posts,
 });
+
+// type AppAction =
+//     | ContadorAction
+//     | ItensAction
+//     | PostsAction;
+//
+// const appState: IAppState = {
+//     contador: { count: 0 },
+//     itens: [],
+//     posts: [],
+// };
+//
+// function reducers2(state: IAppState = appState, action: AppAction): IAppState {
+//     return {
+//         contador: contador(state.contador, action)
+//     };
+// }
 
 export const store = createStore(
     reducers,
