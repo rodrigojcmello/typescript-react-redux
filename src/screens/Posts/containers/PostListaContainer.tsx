@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import { definirPosts, DefinirPosts, Post } from '../../../store/posts/postsActions';
-import { IAppState } from '../../../store/store';
+import { AppState } from '../../../store/store';
 import apiRequest from '../../../utils/apiRequest';
 import PostLista from '../components/PostLista/PostLista';
 
@@ -29,7 +29,7 @@ class PostListaContainer extends React.PureComponent<IProps> {
     }
 }
 
-const mapStateToProps = (state: IAppState) => ({
+const mapStateToProps = (state: AppState) => ({
     posts: state.posts,
 });
 

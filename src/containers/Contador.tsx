@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import { aumentar } from '../store/contador/contadorActions';
-import { IAppState } from '../store/store';
+import { AppState } from '../store/store';
 import { Aumentar } from '../store/contador/ContadorInterfaces';
 
 interface IPropsContador {
@@ -32,11 +32,11 @@ class Contador extends React.PureComponent<IPropsContador> {
     }
 }
 
-const mapStateToProps = (state: IAppState) => ({
+const mapStateToProps = (state: AppState) => ({
     count: state.contador.count,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<IAppState>) => (
+const mapDispatchToProps = (dispatch: Dispatch<AppState>) => (
     bindActionCreators({ aumentar }, dispatch)
 );
 

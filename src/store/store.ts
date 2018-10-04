@@ -8,7 +8,7 @@ import { contador } from './contador/contadorReducers';
 import itens from './itens/itensReducers';
 import { posts } from './posts/postsReducers';
 
-export interface IAppState extends Action {
+export interface AppState extends Action {
     contador: Contador;
     itens: Item[];
     posts: Post[];
@@ -25,13 +25,13 @@ const reducers = combineReducers({
 //     | ItensAction
 //     | PostsAction;
 //
-// const appState: IAppState = {
+// const appState: AppState = {
 //     contador: { count: 0 },
 //     itens: [],
 //     posts: [],
 // };
 //
-// function reducers2(state: IAppState = appState, action: AppAction): IAppState {
+// function reducers2(state: AppState = appState, action: AppAction): AppState {
 //     return {
 //         contador: contador(state.contador, action)
 //     };
