@@ -10,16 +10,12 @@ class PostLista extends React.PureComponent<Props> {
         super(props);
     }
 
-    public componentDidMount() {
-        console.log('teste');
-    }
-
     public render() {
         return (
             <ul>
-                {this.props.posts.map((post: Post, índice): JSX.Element => (
+                {this.props.posts.map((post: Post, índice) => (
                     <li key={índice}>
-                        {post.title}
+                        {post.title}˜
                     </li>
                 ))}
             </ul>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import ItemVisívelLista from '../components/ItemVisívelLista/ItemVisívelLista';
+import ItemVisívelLista from '../componentes/ItemVisívelLista/ItemVisívelLista';
 import { alternarConclusãoItem } from '../store/itens/itensActions';
 import { AppState } from '../store/store';
 
