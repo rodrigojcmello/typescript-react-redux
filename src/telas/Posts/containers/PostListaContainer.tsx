@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import { definirPosts, DefinirPosts, Post } from '../../../store/posts/postsActions';
 import { AppState } from '../../../store/store';
-import apiRequest from '../../../utils/apiRequest';
-import PostLista from '../components/PostLista/PostLista';
+import chamadaAPI from '../../../úteis/chamadaAPI';
+import PostLista from '../componentes/PostLista/PostLista';
 
 interface IProps {
     definirPosts: DefinirPosts;
@@ -17,7 +17,7 @@ class PostListaContainer extends React.PureComponent<IProps> {
     }
 
     public componentDidMount() {
-        apiRequest('get', '/posts', (posts: Post[]): void => {
+        chamadaAPI('get', '/posts', (posts: Post[]): void => {
             this.props.definirPosts(posts);
         });
     }

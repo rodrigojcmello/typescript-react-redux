@@ -1,10 +1,10 @@
 import { Post } from '../store/posts/postsActions';
-import { host } from './appConstants';
+import { domínio } from './constantesApp';
 
 type Callback = (posts: Post[]) => void;
 
-const apiRequest = (método: string, endpoint: string, callback: Callback, dados?: any) => {
-    fetch(`${host}${endpoint}`, {
+const chamadaAPI = (método: string, endpoint: string, callback: Callback, dados?: any) => {
+    fetch(`${domínio}${endpoint}`, {
         method: método,
         headers: {
             'Content-type': 'application/json; charset=utf-8',
@@ -21,4 +21,4 @@ const apiRequest = (método: string, endpoint: string, callback: Callback, dados
         });
 };
 
-export default apiRequest;
+export default chamadaAPI;

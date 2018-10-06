@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import { AppState } from '../../../store/store';
 import { editarContador } from '../../../store/contador/ContadorActions';
-import { Contador } from '../components/Contador';
+import { Contador } from '../componentes/Contador';
 
 const mapStateToProps = (state: AppState) => ({
     count: state.contador.count,

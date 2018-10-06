@@ -2,9 +2,9 @@ import { RouteConfig } from 'react-router-config';
 // Componentes
 import { Acesso } from './components/telas/Acesso/Acesso';
 import ListaContainer from './containers/ListaContainer';
-import PostListaContainer from './screens/Posts/containers/PostListaContainer';
+import PostListaContainer from './telas/Posts/containers/PostListaContainer';
 import { OláMundo } from './components/OláMundo/OláMundo';
-import Carro from './screens/Carros/components/Carro';
+import Carro from './telas/Carros/components/Carro';
 
 const routes: RouteConfig[] = [
     {

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Post } from '../../../../store/posts/postsActions';
 
-interface IProps {
+interface Props {
     posts: Post[];
 }
 
-class PostLista extends React.PureComponent<IProps> {
-    constructor(props: IProps) {
+class PostLista extends React.PureComponent<Props> {
+    constructor(props: Props) {
         super(props);
     }
 
