@@ -1,4 +1,4 @@
-import { Post, PostsAction } from './postsActions';
+import { Post, PostsAction } from './postsTypes';
 
 export const posts = (state: Post[] = [], action: PostsAction): Post[] => {
     switch (action.type) {

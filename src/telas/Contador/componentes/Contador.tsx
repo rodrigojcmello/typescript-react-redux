@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { EditarContador } from '../../../store/contador/ContadorInterfaces';
+import { EditarContador } from '../../../store/contador/ContadorTypes';
 
 interface Props {
     count?: number;

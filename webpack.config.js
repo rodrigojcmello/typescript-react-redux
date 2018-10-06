@@ -80,16 +80,16 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({ template: './index.html' }),
         new CleanWebpackPlugin(['dist']),
-        !prod ? new ForkTsCheckerWebpackPlugin({
-            tslint: './tslint.json',
-            async: false
-        }) : () => {
-        },
-        !prod ? new ForkTsCheckerNotifierWebpackPlugin({
-            title: 'Webpack',
-            skipSuccessful: true
-        }) : () => {
-        }
+        // !prod ? new ForkTsCheckerWebpackPlugin({
+        //     tslint: './tslint.json',
+        //     async: false
+        // }) : () => {
+        // },
+        // !prod ? new ForkTsCheckerNotifierWebpackPlugin({
+        //     title: 'Webpack',
+        //     skipSuccessful: true
+        // }) : () => {
+        // }
     ],
     optimization: {
         runtimeChunk: 'single',

@@ -1,4 +1,4 @@
-import { Contador, ContadorAction } from './ContadorInterfaces';
+import { Contador, ContadorAction } from './ContadorTypes';
 import * as store from 'store';
 
 const contadorState: Contador = {

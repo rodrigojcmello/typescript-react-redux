@@ -23,5 +23,5 @@ render(
             </>
         </Router>
     </Provider>,
-    document.getElementById('root'),
+    document.getElementById('app'),
 );

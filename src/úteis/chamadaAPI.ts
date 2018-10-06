@@ -1,4 +1,4 @@
-import { Post } from '../store/posts/postsActions';
+import { Post } from '../store/posts/postsTypes';
 import { domínio } from './constantesApp';
 
 type Callback = (posts: Post[]) => void;
