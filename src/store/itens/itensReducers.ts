@@ -1,4 +1,4 @@
-import { Item, ItensAction } from './itensInterfaces';
+import { Item, ItensAction } from './itensTypes';
 
 const itens = (state: Item[] = [], action: ItensAction): Item[] => {
     switch (action.type) {

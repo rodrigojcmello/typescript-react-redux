@@ -1,4 +1,4 @@
-import { AdicionarItem, AdicionarItemAction, AlternarConclusãoItensAction } from './itensInterfaces';
+import { AdicionarItem, AdicionarItemAction, AlternarConclusãoItensAction } from './itensTypes';
 
 export const adicionarItem: AdicionarItem = (autor, título): AdicionarItemAction => ({
     autor,

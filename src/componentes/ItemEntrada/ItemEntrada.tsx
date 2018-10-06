@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AdicionarItem } from '../../store/itens/itensInterfaces';
+import { AdicionarItem } from '../../store/itens/itensTypes';
 
 interface IStateItemEntrada {
     entrada: string;

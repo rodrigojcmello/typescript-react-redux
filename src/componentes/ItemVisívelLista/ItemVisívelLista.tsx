@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AlternarConclusãoItem, Item } from '../../store/itens/itensInterfaces';
+import { AlternarConclusãoItem, Item } from '../../store/itens/itensTypes';
 import * as s from './ItemVisívelLista.scss';
 
 interface Props {

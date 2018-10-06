@@ -7,7 +7,6 @@ export interface EditarContatadoAction {
     type: 'EDITAR_CONTADOR';
 }
 
-export type EditarContador = (número: number) => void | EditarContatadoAction;
+export type EditarContador = (número: number) => EditarContatadoAction;
 
-export type ContadorAction =
-    | EditarContatadoAction;
+export type ContadorAction = EditarContatadoAction;

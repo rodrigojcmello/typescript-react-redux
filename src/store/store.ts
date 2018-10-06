@@ -1,7 +1,7 @@
 import { Action, combineReducers, createStore } from 'redux';
 // Actions
 import { Contador } from './contador/ContadorTypes';
-import { Item } from './itens/itensInterfaces';
+import { Item } from './itens/itensTypes';
 import { Post } from './posts/postsTypes';
 // Reducers
 import { contador } from './contador/contadorReducers';
