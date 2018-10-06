@@ -1,6 +1,6 @@
-import { DefinirPosts, DefinirPostsAction } from './postsTypes';
+import { DefinirPosts, DefinirPostsAction, Post } from './postsTypes';
 
-export const definirPosts: DefinirPosts = (posts: any): DefinirPostsAction => ({
+export const definirPosts: DefinirPosts = (posts: Post[]): DefinirPostsAction => ({
     type: 'DEFINIR_POSTS',
     posts,
 });

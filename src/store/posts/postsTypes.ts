@@ -10,7 +10,6 @@ export interface DefinirPostsAction {
     posts: Post[];
 }
 
-// export type DefinirPosts = (posts: Post[]) => void | DefinirPostsAction;
-export type DefinirPosts = any;
+export type DefinirPosts = (posts: Post[]) => DefinirPostsAction;
 
 export type PostsAction = DefinirPostsAction;
