@@ -2,20 +2,12 @@ export interface Contador {
     count: number;
 }
 
-export interface AumentarAction {
+export interface EditarContatadoAction {
     número: number;
-    type: 'AUMENTAR';
+    type: 'EDITAR_CONTADOR';
 }
 
-export type Aumentar = (número: number) => void | AumentarAction;
-
-export interface DiminuirAction {
-    número: number;
-    type: 'DIMINUIR';
-}
-
-export type Diminuir = (número: number) => void | DiminuirAction;
+export type EditarContador = (número: number) => void | EditarContatadoAction;
 
 export type ContadorAction =
-    | AumentarAction
-    | DiminuirAction;
+    | EditarContatadoAction;

@@ -1,11 +1,6 @@
-import { Aumentar, AumentarAction, Diminuir, DiminuirAction } from './ContadorInterfaces';
+import { EditarContador, EditarContatadoAction } from './ContadorInterfaces';
 
-export const aumentar: Aumentar = (número): AumentarAction => ({
-    type: 'AUMENTAR',
-    número,
-});
-
-export const diminuir: Diminuir = (número): DiminuirAction => ({
-    type: 'DIMINUIR',
+export const editarContador: EditarContador = (número): EditarContatadoAction => ({
+    type: 'EDITAR_CONTADOR',
     número,
 });

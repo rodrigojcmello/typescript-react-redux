@@ -8,14 +8,7 @@ const contadorState: Contador = {
 export const contador = (state = contadorState, action: ContadorAction): Contador => {
     let count: number;
     switch (action.type) {
-        case 'AUMENTAR':
-            count = action.número + state.count;
-            store.set('contador.count', count);
-            return {
-                ...state,
-                count,
-            };
-        case 'DIMINUIR':
+        case 'EDITAR_CONTADOR':
             count = action.número + state.count;
             store.set('contador.count', count);
             return {

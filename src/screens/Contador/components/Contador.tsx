@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Aumentar } from '../../../store/contador/ContadorInterfaces';
+import { EditarContador } from '../../../store/contador/ContadorInterfaces';
 
 interface Props {
     count?: number;
-    aumentar?: Aumentar;
+    editar_contador?: EditarContador;
 }
 
 export class Contador extends React.PureComponent<Props> {
@@ -13,7 +13,7 @@ export class Contador extends React.PureComponent<Props> {
 
     public clicar = (evento: React.SyntheticEvent<HTMLButtonElement>) => {
         const número = Number(evento.currentTarget.dataset.número);
-        this.props.aumentar(número);
+        this.props.editar_contador(número);
     };
 
     public render() {
