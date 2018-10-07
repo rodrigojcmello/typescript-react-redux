@@ -21,7 +21,8 @@
       "always",
       "strict-bound-class-methods"
     ],
-    "interface-name": false
+    "interface-name": false,
+    "eofline": false
   },
   "rulesDirectory": []
 }

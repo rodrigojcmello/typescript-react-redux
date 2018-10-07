@@ -7,6 +7,7 @@ import { Post } from './posts/postsTypes';
 import { contador } from './contador/contadorReducers';
 import itens from './itens/itensReducers';
 import { posts } from './posts/postsReducers';
+import { modal } from './modal/modalReducers';
 
 export interface AppState extends Action {
     contador: Contador;
@@ -18,24 +19,8 @@ const reducers = combineReducers({
     contador,
     itens,
     posts,
+    modal,
 });
-
-// type AppAction =
-//     | ContadorAction
-//     | ItensAction
-//     | PostsAction;
-//
-// const appState: AppState = {
-//     contador: { count: 0 },
-//     itens: [],
-//     posts: [],
-// };
-//
-// function reducers2(state: AppState = appState, action: AppAction): AppState {
-//     return {
-//         contador: contador(state.contador, action)
-//     };
-// }
 
 export const store = createStore(
     reducers,

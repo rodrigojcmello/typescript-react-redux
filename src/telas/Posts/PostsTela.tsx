@@ -1,12 +1,12 @@
 import * as React from 'react';
 import PostListaContainer from './containers/PostListaContainer';
-import PostModal from './componentes/PostModal/PostModal';
+import Modal from '../../componentes/Modal/Modal';
 
 const PostsTela = () => (
     <>
         <h1>Posts</h1>
         <PostListaContainer/>
-        <PostModal
+        <Modal
             título={'Título'}
             conteúdo={'Conteúdo'}
         />

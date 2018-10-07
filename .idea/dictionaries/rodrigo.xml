@@ -4,6 +4,7 @@
       <w>autoprefixer</w>
       <w>contenthash</w>
       <w>devtools</w>
+      <w>eofline</w>
       <w>esnext</w>
       <w>fnames</w>
       <w>ident</w>
