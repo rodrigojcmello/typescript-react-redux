@@ -1,0 +1,35 @@
+#modal {
+    position: relative;
+    z-index: 999;
+}
+
+:local {
+    .fundo {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal {
+        height: 400px;
+        width: 500px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1);
+    }
+    .cabeçalho {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 16px;
+    }
+    .título {
+        font-size: 14px;
+        margin: 0;
+        line-height: 46px;
+    }
+}
+

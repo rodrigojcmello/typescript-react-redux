@@ -14,6 +14,7 @@
       <w>postcss</w>
       <w>quotemark</w>
       <w>redux</w>
+      <w>svgr</w>
       <w>toplevel</w>
       <w>tslint</w>
       <w>uglify</w>

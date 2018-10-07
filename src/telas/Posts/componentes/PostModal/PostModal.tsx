@@ -1,12 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as s from './PostModal.scss';
 
 const modalRoot = document.getElementById('modal');
 
-class PostModal extends React.Component {
+interface Props {
+    título: string;
+    conteúdo: any;
+}
+
+class PostModal extends React.PureComponent<Props> {
     public el: HTMLElement;
 
-    constructor(props: {}) {
+    constructor(props: Props) {
         super(props);
         this.el = document.createElement('div');
     }
@@ -21,7 +27,17 @@ class PostModal extends React.Component {
 
     public render() {
         return ReactDOM.createPortal(
-            this.props.children,
+            <div className={s.fundo}>
+                <div className={s.modal}>
+                    <div className={s.cabeçalho}>
+                        <h2 className={s.título}>
+                            {this.props.título}
+                            <button onClick={() => {}}>fechar</button>
+                        </h2>
+                    </div>
+                    {this.props.conteúdo}
+                </div>
+            </div>,
             this.el,
         );
     }

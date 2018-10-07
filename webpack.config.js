@@ -70,26 +70,36 @@ const config = {
                 ]
             },
             {
-                test: /\.(jpe?g|png|gif|eot|woff2?|ttf|svg)$/,
+                test: /\.(jpe?g|png|gif|eot|woff2?|ttf)$/,
                 use: [{
                     loader: 'file-loader',
                     options: { name: prod ? 'assets/[hash].[ext]' : 'assets/[name].[hash].[ext]' }
                 }]
-            }]
+            },
+            {
+                test: /\.svg$/,
+                use: [{
+                    loader: '@svgr/webpack',
+                    options: {
+                        typescript: true
+                    }
+                }]
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './index.html' }),
         new CleanWebpackPlugin(['dist']),
-        // !prod ? new ForkTsCheckerWebpackPlugin({
-        //     tslint: './tslint.json',
-        //     async: false
-        // }) : () => {
-        // },
-        // !prod ? new ForkTsCheckerNotifierWebpackPlugin({
-        //     title: 'Webpack',
-        //     skipSuccessful: true
-        // }) : () => {
-        // }
+        !prod ? new ForkTsCheckerWebpackPlugin({
+            tslint: './tslint.json',
+            async: false
+        }) : () => {
+        },
+        !prod ? new ForkTsCheckerNotifierWebpackPlugin({
+            title: 'Webpack',
+            skipSuccessful: true
+        }) : () => {
+        }
     ],
     optimization: {
         runtimeChunk: 'single',
