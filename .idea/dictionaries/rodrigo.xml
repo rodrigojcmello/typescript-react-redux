@@ -1,25 +1,3 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="rodrigo">
-    <words>
-      <w>autoprefixer</w>
-      <w>contenthash</w>
-      <w>devtools</w>
-      <w>eofline</w>
-      <w>esnext</w>
-      <w>fnames</w>
-      <w>ident</w>
-      <w>mello</w>
-      <w>minify</w>
-      <w>msapplication</w>
-      <w>multiline</w>
-      <w>postcss</w>
-      <w>quotemark</w>
-      <w>redux</w>
-      <w>svgr</w>
-      <w>toplevel</w>
-      <w>tslint</w>
-      <w>uglify</w>
-      <w>unmount</w>
-    </words>
-  </dictionary>
+  <dictionary name="rodrigo" />
 </component>

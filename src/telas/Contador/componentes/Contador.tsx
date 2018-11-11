@@ -12,17 +12,17 @@ export class Contador extends React.PureComponent<Props> {
     }
 
     public clicar = (evento: React.SyntheticEvent<HTMLButtonElement>) => {
-        const número = Number(evento.currentTarget.dataset.número);
-        this.props.editar_contador(número);
+        const numero = Number(evento.currentTarget.dataset.numero);
+        this.props.editar_contador(numero);
     };
 
     public render() {
         return (
             <div>
-                <button data-número={10} onClick={this.clicar}>
+                <button data-numero={10} onClick={this.clicar}>
                     aumentar
                 </button>
-                <button data-número={-10} onClick={this.clicar}>
+                <button data-numero={-10} onClick={this.clicar}>
                     diminuir
                 </button>
                 <span>{this.props.count}</span>

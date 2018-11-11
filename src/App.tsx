@@ -17,6 +17,8 @@ render(
                 <Link to='/acesso'>acesso</Link>
                 <Link to='/olá-mundo'>Olá Mundo</Link>
                 <Link to='/posts'>Posts</Link>
+                <Link to='/teste'>Teste</Link>
+                <Link to='/exemplo'>Exemplo</Link>
                 <Switch>
                     {renderRoutes(routes)}
                 </Switch>

@@ -22,7 +22,9 @@
       "strict-bound-class-methods"
     ],
     "interface-name": false,
-    "eofline": false
+    "eofline": false,
+    "member-access": false,
+    "max-classes-per-file": false
   },
   "rulesDirectory": []
 }

@@ -35,8 +35,12 @@ class Modal extends React.PureComponent<Props> {
                                 <div className={s.cabeçalho}>
                                     <h2 className={s.título}>
                                         {this.props.título}
-                                        <button onClick={() => {
-                                        }}>fechar
+                                        <button
+                                            onClick={() => {
+                                                alert('ok');
+                                            }}
+                                        >
+                                            fechar
                                         </button>
                                     </h2>
                                 </div>
